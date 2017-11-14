@@ -1,0 +1,6 @@
+<form (submit)="runApi()" #form ="ngForm">
+  Github UserName: <input type="text" name="username" [(ngModel)] = "obj.username" #username="ngModel" >
+  <input type="submit" value="Submit">
+</form>
+<h1 *ngIf="user.public_repos || user.followers">{{user.public_repos + user.followers}}</h1>
+
